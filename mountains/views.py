@@ -5,7 +5,9 @@ from .serializers import MountainSerializer
 from .models import Mountain
 
 
-class MountainsViewset(viewsets.ModelViewSet):
+class Mountainsviewset(viewsets.ModelViewSet):
     queryset = Mountain.objects.all()
     serializer_class = MountainSerializer
     http_method_names = ['get', 'post', 'patch', 'delete', 'head', 'options']
+
+
