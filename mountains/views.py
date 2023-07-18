@@ -13,11 +13,3 @@ class Mountainsviewset(viewsets.ModelViewSet):
     http_method_names = ['get', 'post', 'patch', 'delete', 'head', 'options']
 
 
-@api_view(['get'])
-def get_data(request, pk):
-    try:
-        mountain = Mountain.objects.get(pk=pk)
-    except ObjectDoesNotExist:
-        return Response(status=401)
-    serializer = MountainSerializer(mountain)
-    return Response(serializer.data)
