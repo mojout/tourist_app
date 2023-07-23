@@ -68,7 +68,7 @@ Return a list of all objects that were sent to the system by the user with the s
 
 **Sprint 2, duration 1 week :**
 1. Adding new methods for REST API:
-   - GET /submitdata/<id>
-   - PATCH /submitdata/<id>
+   - GET /submitdata/\<id>
+   - PATCH /submitdata/\<id>
    - GET /submitData/?user__email=\<email>
 2. Server Deployment.
