@@ -57,7 +57,7 @@ Retrieves data for a particular mountain pass.
 Allows to change a mountain pass attribute values. Returns a JSON response with:
 - [X] state: '1' for successful update and '0' for unsuccessful update.
 - [X] message: explains why an update has failed.
-### GET /submitdata/?user__email=<email> 
+### GET /submitdata/?user__email=\<email> 
 Return a list of all objects that were sent to the system by the user with the specified email address.
 
 ### Development stages:
