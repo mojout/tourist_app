@@ -1,4 +1,4 @@
-# REST API for for the Federation of Sports Tourism of Russia - pereval.online website
+# :sunrise_over_mountains: Tourist app - REST API for for the Federation of Sports Tourism of Russia - pereval.online website
 The Federation for Sports Tourism in Russia maintains a database of mountain passes that receives tourist contributions. The FSTR group of experts verifies the information and saves it to the database. This is an API solution for a mobile application, which can be used by tourists to submit mountain pass data and send it to FSTR once they have internet access.
 
 When tourists reach a mountain pass, they can take pictures and use the mobile application to submit the information. Once a tourist clicks "Send", the mobile application calls submitData method, which accepts data in JSON format.
@@ -46,7 +46,7 @@ Example JSON data:
     }
 ]
 ```
-# API methods
+# :computer: API methods
 ### GET /submitdata/ method
 Returns a list of all mountain passes.
 ### POST /submitdata/ method
@@ -57,5 +57,18 @@ Retrieves data for a particular mountain pass.
 Allows to change a mountain pass attribute values. Returns a JSON response with:
 - [X] state: '1' for successful update and '0' for unsuccessful update.
 - [X] message: explains why an update has failed.
-### GET/submitdata/?user__email=<email>
+### GET /submitdata/?user__email=<email> 
 Return a list of all objects that were sent to the system by the user with the specified email address.
+
+### Development stages:
+**Sprint 1, duration 1 week :**
+1. Database creation, normalization.
+2. Creating a class for working with data.
+3. Creating a REST API with one method - POST submitData.
+
+**Sprint 2, duration 1 week :**
+1. Adding new methods for REST API:
+   - GET /submitdata/<id>
+   - PATCH /submitdata/<id>
+   - GET /submitData/?user__email=<email>
+2. Server Deployment.
