@@ -59,8 +59,7 @@ Allows to change a mountain pass attribute values. Returns a JSON response with:
 - [X] message: explains why an update has failed.
 ### GET /submitdata/?user__email=\<email> 
 Return a list of all objects that were sent to the system by the user with the specified email address.
-
-### Development stages:
+# Development stages:
 **Sprint 1, duration 1 week :**
 1. Database creation, normalization.
 2. Creating a class for working with data.
