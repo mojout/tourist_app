@@ -1,12 +1,10 @@
-from django.core.exceptions import ObjectDoesNotExist
-from rest_framework import viewsets, status, permissions, mixins
-from rest_framework.decorators import api_view
+from rest_framework import viewsets
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from django_filters import rest_framework as df_filters
 
-from .serializers import MountainSerializer, ImageSerializer
-from .models import Mountain, MountainImage
+from .serializers import MountainSerializer
+from .models import Mountain
 
 
 class MountainFilter(df_filters.FilterSet):
