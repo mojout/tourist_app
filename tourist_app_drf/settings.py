@@ -62,7 +62,7 @@ ROOT_URLCONF = "tourist_app_drf.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates']
+        "DIRS": [BASE_DIR / 'tourist_app/templates']
         ,
         "APP_DIRS": True,
         "OPTIONS": {
