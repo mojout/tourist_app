@@ -33,6 +33,27 @@ class MountainApiTestCase(APITestCase):
                 spring="1A"
             )
         )
+        self.setup_data2 = Mountain.objects.create(
+            title="Everest",
+            user=User.objects.create(
+                first_name="Андрей",
+                second_name="Иванович",
+                last_name="Анисимов",
+                email="masxx2x221@yandex.ru",
+                phone="+7917336353"
+            ),
+            coords=Coord.objects.create(
+                latitude=43.18342,
+                longitude=32.112525,
+                height=900
+            ),
+            level=Level.objects.create(
+                winter="1A",
+                summer="1А",
+                autumn="1А",
+                spring="1A"
+            )
+        )
         self.image_1 = MountainImage.objects.create(
             mountain=self.setup_data,
             data="https://s.mediasalt.ru/cache/content/data/images/130/130083/original.jpg",
@@ -116,12 +137,12 @@ class BaseTestCase(MountainApiTestCase):
         response = self.client.get("/submitdata/", {"user__email": "masxx2x22@yandex.ru"})
         self.assertEqual(len(response.data), 1)
 
-    # def test_valid_patch_passage(self):
-    #     response = self.client.patch(path=reverse("submitdata-detail",
-    #                                               kwargs={'pk': self.setup_data.pk}),
-    #                                  data=self.patch_data,
-    #                                  format='json')
-    #     self.assertEqual(response.data, {'state': 1, 'message': 'The record was successfully updated'})
+    def test_valid_patch_passage(self):
+        response = self.client.patch(path=reverse("submitdata-detail",
+                                                  kwargs={'pk': self.setup_data2.pk}),
+                                     data=self.patch_data,
+                                     format='json')
+        self.assertEqual(response.data, {'state': 1, 'message': 'The record was successfully updated'})
 
 
 class CreateNewMountainTest(APITestCase):
