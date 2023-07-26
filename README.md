@@ -1,4 +1,4 @@
-![action status](https://github.com/github/tourist_app/actions/workflows/django.yml/badge.svg)
+![action status](https://github.com/mojout/tourist_app/actions/workflows/django.yml/badge.svg)
 
 # :sunrise_over_mountains: Tourist app - REST API for for the Federation of Sports Tourism of Russia - pereval.online website
 The Federation for Sports Tourism in Russia maintains a database of mountain passes that receives tourist contributions. The FSTR group of experts verifies the information and saves it to the database. This is an API solution for a mobile application, which can be used by tourists to submit mountain pass data and send it to FSTR once they have internet access.
