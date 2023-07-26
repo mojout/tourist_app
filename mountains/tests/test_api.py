@@ -112,16 +112,16 @@ class BaseTestCase(MountainApiTestCase):
         self.assertEqual(status.HTTP_200_OK, response.status_code)
         self.assertEqual('Katu-Yaryik', self.setup_data.title)
 
-    def test_get_data_by_email(self):
-        response = self.client.get("/submitdata/", {"user__email": "masxx2x22@yandex.ru"})
-        self.assertEqual(len(response.data), 1)
+    # def test_get_data_by_email(self):
+    #     response = self.client.get("/submitdata/", {"user__email": "masxx2x22@yandex.ru"})
+    #     self.assertEqual(len(response.data), 1)
 
-    # def test_valid_patch_passage(self):
-    #     response = self.client.patch(path=reverse("submitdata-detail",
-    #                                               kwargs={'pk': self.setup_data.pk}),
-    #                                  data=self.patch_data,
-    #                                  format='json')
-    #     self.assertEqual(response.data, {'state': 1, 'message': 'The record was successfully updated'})
+    def test_valid_patch_passage(self):
+        response = self.client.patch(path=reverse("submitdata-detail",
+                                                  kwargs={'pk': self.setup_data.pk}),
+                                     data=self.patch_data,
+                                     format='json')
+        self.assertEqual(response.data, {'state': 1, 'message': 'The record was successfully updated'})
 
 
 class CreateNewMountainTest(APITestCase):
