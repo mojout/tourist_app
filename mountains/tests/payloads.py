@@ -134,7 +134,7 @@ patch_data = {
             "first_name": "Михаил",
             "second_name": "Иванович",
             "last_name": "Анисимов",
-            "email": "masxx2x22@yandex.ru",
+            "email": "masxx23x22@yandex.ru",
             "phone": "+7917336353"
         },
         "coords": {
