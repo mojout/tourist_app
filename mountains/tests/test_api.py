@@ -136,6 +136,7 @@ class CreateNewMountainTest(APITestCase):
         url = reverse('submitdata-list')
         response = self.client.post(url, data=json.dumps(self.valid_mountain_test_data),
                                     content_type='application/json')
+        print(url)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_invalid_user(self):
