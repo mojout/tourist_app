@@ -61,6 +61,37 @@ Allows to change a mountain pass attribute values. Returns a JSON response with:
 - [X] message: explains why an update has failed.
 ### GET /submitdata/?user__email=\<email> 
 Return a list of all objects that were sent to the system by the user with the specified email address.
+
+# ☑️ Testing
+
+```
+Name                                            Stmts   Miss  Cover
+-------------------------------------------------------------------
+__init__.py                                         0      0   100%
+manage.py                                          12      2    83%
+mountains/__init__.py                               0      0   100%
+mountains/admin.py                                  7      0   100%
+mountains/apps.py                                   4      0   100%
+mountains/migrations/0001_initial.py                6      0   100%
+mountains/migrations/0002_alter_user_email.py       4      0   100%
+mountains/migrations/__init__.py                    0      0   100%
+mountains/models.py                                35      0   100%
+mountains/serializers.py                           44      1    98%
+mountains/tests/__init__.py                         0      0   100%
+mountains/tests/payloads.py                         6      0   100%
+mountains/tests/test_api.py                        79      7    91%
+mountains/urls.py                                   8      0   100%
+mountains/views.py                                 25      1    96%
+mountains/yasg.py                                   6      0   100%
+tourist_app_drf/__init__.py                         0      0   100%
+tourist_app_drf/asgi.py                             4      4     0%
+tourist_app_drf/settings.py                        26      0   100%
+tourist_app_drf/urls.py                             5      0   100%
+tourist_app_drf/wsgi.py                             4      4     0%
+-------------------------------------------------------------------
+TOTAL                                             275     19    93%
+```
+
 # Development stages:
 **Sprint 1, duration 1 week :**
 1. Database creation, normalization.
