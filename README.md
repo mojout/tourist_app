@@ -68,8 +68,13 @@ Return a list of all objects that were sent to the system by the user with the s
 3. Creating a REST API with one method - POST submitData.
 
 **Sprint 2, duration 1 week :**
-1. Adding new methods for REST API:
+
+Adding new methods for REST API:
    - GET /submitdata/\<id>
    - PATCH /submitdata/\<id>
    - GET /submitData/?user__email=\<email>
-2. Server Deployment.
+     
+**Sprint 3, duration 1 week :**
+1. Add REST API documentation to Readme.md
+2. Implemented documentation with Swagger
+3. Cover code with tests
