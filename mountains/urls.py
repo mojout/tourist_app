@@ -8,7 +8,6 @@ router.register(r'submitdata', Mountainsviewset, basename='submitdata')
 
 urlpatterns = [
     path('', include(router.urls)),
-
 ]
 
 urlpatterns += doc_urls
