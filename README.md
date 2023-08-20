@@ -109,3 +109,6 @@ Adding new methods for REST API:
 1. Add REST API documentation to Readme.md
 2. Implemented documentation with Swagger
 3. Cover code with tests
+
+Upd 20.08.2023:
+* authorization by JWT
