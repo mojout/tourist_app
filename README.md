@@ -110,5 +110,5 @@ Adding new methods for REST API:
 2. Implemented documentation with Swagger
 3. Cover code with tests
 
-Upd 20.08.2023:
+Upd:
 * authorization by JWT
