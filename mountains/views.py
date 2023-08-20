@@ -20,7 +20,6 @@ class Mountainsviewset(viewsets.ModelViewSet):
     http_method_names = ['get', 'post', 'patch', 'delete', 'head', 'options']
     filter_backends = [df_filters.DjangoFilterBackend]
     filterset_class = MountainFilter
-    permission_classes = (AllowAny, )
 
     def update(self, request, *args, **kwargs):
         mountain = self.get_object()
