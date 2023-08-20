@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from django_filters import rest_framework as df_filters
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny
 
 from .serializers import MountainSerializer
 from .models import Mountain
@@ -20,7 +20,7 @@ class Mountainsviewset(viewsets.ModelViewSet):
     http_method_names = ['get', 'post', 'patch', 'delete', 'head', 'options']
     filter_backends = [df_filters.DjangoFilterBackend]
     filterset_class = MountainFilter
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (AllowAny, )
 
     def update(self, request, *args, **kwargs):
         mountain = self.get_object()
